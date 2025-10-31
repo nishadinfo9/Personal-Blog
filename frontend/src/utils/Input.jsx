@@ -1,8 +1,15 @@
 import React from "react";
 
-const Input = ({ label, error, type = "text", className = "", ...props }) => {
+const Input = ({
+  label,
+  size = "w-sm",
+  error,
+  type = "text",
+  className = "",
+  ...props
+}) => {
   return (
-    <div className="flex flex-col gap-2 w-sm">
+    <div className={`flex flex-col gap-2 ${size}`}>
       {label && (
         <label className="text-gray-200 text-sm font-medium">{label}</label>
       )}
