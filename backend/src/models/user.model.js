@@ -30,6 +30,14 @@ const userSchema = new Schema({
   refreshToken: {
     type: String,
   },
+  avatar: {
+    type: String,
+    default: "",
+  },
+  coverImage: {
+    type: String,
+    default: "",
+  },
 });
 
 userSchema.pre("save", async function (next) {
